@@ -89,6 +89,7 @@ picture {
 /*---------------------------
  ** Base
 -----------------------------*/
+
 body {
   display: flex;
   flex-direction: column;
@@ -97,11 +98,12 @@ body {
   z-index: -2;
   color: var(--primary-black);
   background-color: var(--primary-white);
-  width: 100%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   overflow-y: hidden;
   position: absolute;
+
   @media screen and(min-width:600px) {
     position: initial;
     z-index: initial;
@@ -116,24 +118,21 @@ header {
 header,
 main,
 footer {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
-  padding: 0rem 1.2rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0rem 1.2rem;
+
   @media screen and(min-width:600px) {
-    padding: 0rem 2rem;
     z-index: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
-  @media screen and(min-width:850px) {
-    padding: 0rem 4rem;
-  }
+
   & p {
-    max-width: 30rem;
+    max-width: 60%;
   }
 }
 
@@ -149,21 +148,41 @@ a {
 /*---------------------------
  ** Component Styles
 -----------------------------*/
+
 .navigation-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: 0rem 1.5rem;
   margin: 1.2rem 1.2rem 0rem 1.2rem;
   @media screen and(min-width:850px) {
     background-color: var(--primary-white);
-    width: 100vw;
-    padding: 1rem 4.5rem;
+    max-width: 1440px;
+    padding: 1rem 2.5rem;
     margin: 0rem;
   }
 }
-
+.switch-lang-container {
+  @media screen and(max-width:660px) {
+    color: var(--primary-white);
+  }
+  cursor: pointer;
+  text-underline: none;
+}
+.color {
+  @media screen and(max-width:660px) {
+    color: var(--primary-white);
+    border: 1px solid var(--primary-one);
+    border-radius: 50%;
+  }
+  color: var(--primary-white);
+  background-color: #3e78b2;
+  border-radius: 50%;
+  padding: 0.2rem;
+  transition: 0.5s ease-in;
+}
 .logo-container {
   text-align: left;
   width: 9rem;
@@ -185,7 +204,7 @@ a {
     transition: all 0.3s ease-in-out;
     background-color: var(--primary-black);
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 660px) {
     padding: 0px;
     display: block;
     background: none;
@@ -214,7 +233,7 @@ a {
   gap: 2rem;
 
   .contact-btn {
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 660px) {
       color: var(--primary-black);
       border: 0.1rem solid var(--primary-two);
       transition: 500ms ease-out;
@@ -232,7 +251,7 @@ a {
     padding: 0.5rem 2.5rem;
   }
   & li {
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 660px) {
       color: var(--primary-black);
       &:hover {
         text-decoration: underline;
@@ -240,13 +259,13 @@ a {
     }
 
     a {
-      @media only screen and (min-width: 600px) {
+      @media only screen and (min-width: 660px) {
         color: var(--primary-black);
       }
       color: var(--primary-white);
     }
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 660px) {
     position: fixed;
     left: -100%;
     top: 6rem;
@@ -255,7 +274,7 @@ a {
     align-items: center;
     background-color: rgba(62, 120, 178, 0.97);
     width: 100%;
-    height: 13rem;
+    height: 16rem;
     border-radius: 10px;
     text-align: center;
     font-weight: 600;
@@ -299,12 +318,7 @@ a {
   right: 40%;
   top: 5%;
   @media only screen and(min-width:600px) {
-    left: 0rem;
-    top: 5rem;
-    width: 50%;
-  }
-  @media only screen and(min-width:600px) {
-    width: 30%;
+    display: none;
   }
 }
 .main-circle-one {
@@ -319,10 +333,15 @@ a {
   @media only screen and(min-width:1000px) {
     width: 40%;
   }
+  @media only screen and(min-width:1440px) {
+    top: 45rem;
+    left: 15rem;
+    width: 30%;
+  }
 }
 .main-circle-two {
   top: 40%;
-  right: -30%;
+  right: 0%;
   width: 15rem;
   @media only screen and(min-width:600px) {
     top: 100rem;
@@ -331,6 +350,10 @@ a {
   }
   @media only screen and(min-width:1000px) {
     width: 30%;
+  }
+  @media only screen and(min-width:1440px) {
+    top: 80rem;
+    width: 25%;
   }
 }
 .main-circle-three {
@@ -344,31 +367,39 @@ a {
   @media only screen and(min-width:1000px) {
     width: 40%;
   }
-}
-
-.hero-img-desktop {
-  width: 785px;
-  height: 816px;
-  display: none;
-  @media screen and(min-width:600px) {
-    display: block;
-    position: absolute;
-    width: 70%;
-    top: 30%;
-    right: -5rem;
-  }
-  @media screen and(min-width:700px) {
-    top: 40%;
-    right: -8rem;
-  }
-  @media screen and(min-width:850px) {
-    top: -15rem;
-    right: -10rem;
-    z-index: -1;
-    width: 50%;
+  @media only screen and(min-width:1440px) {
+    top: 90rem;
+    width: 22%;
   }
 }
+.hero-img-mobile {
+  position: absolute;
+  width: auto;
+  height: auto;
+  width: 90vw;
+  height: 90vw;
+  transform: rotate(-10deg);
+  @media screen and (min-width: 410px) {
+    width: 70vw;
+    height: 70vw;
+  }
+  @media screen and (min-width: 500px) {
+    width: 60vw;
+    height: 60vw;
+  }
+  @media screen and (min-width: 600px) {
+    width: 50vw;
+    height: 50vw;
+  }
+  @media screen and (min-width: 850px) {
+    width: 25rem;
+    height: 25rem;
+  }
 
+  @media screen and(min-width:1100px) {
+    display: none;
+  }
+}
 .green {
   animation: showup 5s forwards;
 }
@@ -416,22 +447,44 @@ a {
 }
 //-------------------------------------------------------------------------------------------------------------
 //-----------------------------------------------Hero-main-text---------------------------
+.header {
+  @media screen and (min-width: 1100px) {
+    max-width: 100%;
+  }
+}
 .hero {
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 850px) {
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+
+  @media screen and (min-width: 1100px) {
     flex-direction: row;
     justify-content: space-between;
-    width: 100vw;
-    padding: 0rem 2.5rem;
+    align-items: flex-start;
+    width: 100%;
+    margin-right: 11rem !important;
+    margin-left: 11rem !important;
+    padding: 0rem 2.5rem 5rem 2.5rem;
+
+    overflow: hidden;
+    background-image: url(./pozeDesktop/desktop-main-circles-group.svg);
+    background-repeat: no-repeat;
+    background-position: 120% -100%;
+    background-size: 30rem;
+  }
+  @media screen and (min-width: 1200px) {
+    background-position: 120% 200%;
+    background-size: 38rem;
   }
 
   .call-to-action {
-    @media screen and (min-width: 850px) {
+    @media screen and (min-width: 1100px) {
       text-align: left;
       align-items: flex-start;
       justify-content: flex-start;
-      max-width: 50rem;
+      max-width: 100%;
     }
     display: flex;
     justify-content: center;
@@ -439,34 +492,44 @@ a {
     align-items: center;
     .hero-titlu {
       @media screen and (min-width: 600px) {
-        font-size: 6vw;
+        font-size: 5.7vw;
+        margin-left: 2rem;
+        margin-right: 2rem;
       }
-      @media screen and (min-width: 850px) {
-        font-size: 4vw;
-        max-width: 31rem;
+      @media screen and (min-width: 1100px) {
+        font-size: 3rem;
+        max-width: 30rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+
+        .header-text-accent-color {
+          font-size: 3.2rem;
+        }
       }
 
       font-size: 1.9rem;
       font-weight: 700;
       margin-top: 2.5rem;
-      .header-text-accent-color {
+      span {
         color: #3e78b2;
       }
     }
     .hero-text {
       margin-top: 1rem;
       margin-bottom: 2.5rem;
+      max-width: 27rem;
       color: var(--neutral-one);
+
       @media screen and (min-width: 600px) {
         font-size: 2.5vw;
       }
       @media screen and (min-width: 600px) {
-        max-width: 20rem;
-        font-size: 1.9vw;
+        max-width: 32rem;
+        font-size: 2.5vw;
       }
       @media screen and (min-width: 850px) {
-        max-width: 30rem;
-        font-size: 1.7vw;
+        min-width: 30rem;
+        font-size: 1.2rem;
       }
     }
     .btn-contact {
@@ -497,31 +560,6 @@ a {
 }
 //---------------------------------------Hero-aside--------------------------------------------
 
-.hero-img-desktop {
-  @media screen and(max-width:850px) {
-    display: none;
-  }
-}
-.hero-img-mobile {
-  position: absolute;
-  width: auto;
-  height: auto;
-  width: 90vw;
-  height: 90vw;
-  transform: rotate(-10deg);
-  @media screen and (min-width: 410px) {
-    width: 70vw;
-    height: 70vw;
-  }
-  @media screen and (min-width: 500px) {
-    width: 60vw;
-    height: 60vw;
-  }
-  @media screen and (min-width: 600px) {
-    width: 40vw;
-    height: 40vw;
-  }
-}
 .hero-aside {
   display: flex;
   justify-content: flex-start;
@@ -530,8 +568,12 @@ a {
   margin-bottom: 0rem;
   margin-top: 5rem;
   height: 20rem;
-
-  @media screen and (max-width: 850px) {
+  @media screen and(min-width:1100px) {
+    margin-top: 0rem;
+    gap: 1.5rem;
+    justify-content: flex-start;
+  }
+  @media screen and (max-width: 1100px) {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -567,9 +609,17 @@ a {
       font-size: 3vw;
     }
     @media screen and(min-width:850px) {
-      width: 27vw;
-      height: 6vw;
-      font-size: 2vw;
+      width: 21rem;
+      height: 4rem;
+      font-size: 1.2rem;
+    }
+    @media screen and(min-width:1100px) {
+      margin-right: 5rem;
+      margin-top: 4rem;
+    }
+    @media screen and(min-width:1200px) {
+      margin-right: 10rem;
+      margin-top: 4rem;
     }
   }
   .casa-expeditii {
@@ -588,13 +638,13 @@ a {
       height: 8vw;
       font-size: 2.5vw;
     }
-    @media screen and(min-width:700px) {
-      margin-top: 12%;
-    }
     @media screen and(min-width:850px) {
-      width: 26vw;
-      height: 5vw;
-      font-size: 1.7vw;
+      width: 20rem;
+      height: 3.5rem;
+      font-size: 1.1rem;
+    }
+    @media screen and(min-width:1100px) {
+      margin-right: 5rem;
     }
   }
   .transport-comunitate {
@@ -613,13 +663,11 @@ a {
       height: 7vw;
       font-size: 2vw;
     }
-    @media screen and(min-width:700px) {
-      margin-top: 12%;
-    }
+
     @media screen and(min-width:850px) {
-      width: 24vw;
-      height: 4.5vw;
-      font-size: 1.5vw;
+      width: 19rem;
+      height: 3.2rem;
+      font-size: 1rem;
     }
   }
   .check-sign {
@@ -631,11 +679,27 @@ a {
 //-------------------------------------------MAIN- CONTENT-------------------------------------
 .main-content {
   margin-top: 4rem;
-  width: 100%;
+  max-width: 1440px;
   .trasnport-agabaritic {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .transport-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .main-title {
+        width: 70%;
+      }
       @media screen and (min-width: 600px) {
-        font-size: 3vw;
+        font-size: 1.2rem;
+        width: 70%;
+        margin-top: 3rem;
+      }
+      @media screen and (min-width: 850px) {
+        font-size: 1.5rem;
+        width: 100%;
       }
       font-size: 20px;
       margin-bottom: 4rem;
@@ -644,17 +708,34 @@ a {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      align-items: center;
+      align-items: flex-start;
       gap: 4rem;
+      @media screen and (min-width: 600px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 5rem 0rem 5rem 0rem;
+      }
+      @media screen and (min-width: 850px) {
+        width: 100%;
+      }
 
       .icon-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: clamp(3rem, 4rem, 5rem);
-        height: clamp(3rem, 4rem, 5rem);
+        width: 5.2rem;
+        height: 5.2rem;
         border-radius: 15px;
         box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.25);
+        @media screen and (max-width: 850px) {
+          width: 4rem;
+          height: 4rem;
+        }
+        .main-icons {
+          @media screen and (min-width: 850px) {
+            width: 2.2rem;
+          }
+        }
       }
       .content-center {
         display: flex;
@@ -663,17 +744,17 @@ a {
         align-items: center;
         & h4 {
           @media screen and (min-width: 600px) {
-            font-size: 2.5vw;
+            font-size: 1.5rem;
           }
           margin-top: 1rem;
           font-weight: 500;
         }
         & p {
-          width: 12rem;
+          width: 17rem;
           color: var(--neutral-one);
           margin-top: 0.5rem;
           @media screen and (min-width: 600px) {
-            font-size: 2vw;
+            font-size: 1.2rem;
           }
         }
       }
@@ -693,28 +774,37 @@ a {
 .about-us {
   .desprenoi-title {
     @media screen and (min-width: 600px) {
-      font-size: 3vw;
+      font-size: 1.5rem;
     }
     margin: 4rem 0rem 2rem 0rem;
     font-size: 1.2rem;
   }
   .express,
   .danfran {
-    @media screen and (min-width: 600px) {
-      font-size: 2.5vw;
-      h3 {
-        font-size: 3vw;
-      }
-      p {
-        font-size: 2.3vw;
-      }
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 2rem 0rem;
     h3 {
       margin-bottom: 2rem;
     }
     p {
       color: --var(--neutral-one);
+      max-width: 70%;
+    }
+  }
+  @media screen and(min-width:850) {
+    text-align: left;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 600px) {
+    font-size: 1.2rem;
+    h3 {
+      font-size: 1.2;
+    }
+    p {
+      font-size: 1rem;
     }
   }
 }
@@ -726,39 +816,39 @@ a {
   flex-direction: column;
 
   background: linear-gradient(271.73deg, #1de2a2 -6.22%, #3e78b2 79.14%);
-  width: 112%;
+  width: 100%;
   margin-top: 4rem;
   padding: 1.2rem 1.2rem 2rem 1.2rem;
   border-radius: 0rem 3rem 0rem 0rem;
   color: var(--primary-white);
+  h3 {
+    @media screen and(min-width:600px) {
+      font-size: 3rem;
+    }
+  }
   .second-title {
     @media screen and(min-width:600px) {
       margin: 1rem 0rem 0.5rem 0rem;
-      font-size: 2vw;
+      font-size: 1rem;
     }
     font-size: 0.8rem;
-    margin-bottom: 1.8rem;
-  }
-  h3 {
-    @media screen and(min-width:600px) {
-      font-size: 2.5vw;
-    }
+    margin-bottom: 0.7rem;
   }
 }
 .description {
   @media screen and(min-width:600px) {
     margin-bottom: 1.5rem;
     color: var(--primary-white);
-    font-size: 2.3vw;
+    font-size: 1.2rem;
   }
   display: none;
 }
 .gallery-btn {
   @media screen and(min-width:600px) {
-    padding: 0.5rem 5rem;
+    padding: 0.4rem 5rem;
   }
 
-  padding: 0.6rem 8rem;
+  padding: 0.4rem 7rem;
   color: var(--primary-white);
   font-weight: 600;
   font-size: 17px;
@@ -781,8 +871,12 @@ a {
 //-----------------------------------------__Footer----------------------------------
 
 .footer-container {
+  min-width: 100vw;
   @media screen and (min-width: 600px) {
-    max-width: 100vw;
+    padding: 4rem 0rem;
+  }
+  @media screen and (min-width: 1500px) {
+    padding: 4rem 0rem 2rem 0rem;
   }
   display: flex;
   flex-direction: column;
@@ -790,11 +884,11 @@ a {
   align-items: center;
   background-color: var(--neutral-footer);
   color: var(--primary-white);
-  width: 112%;
+  width: 100%;
   padding: 3rem 1.2rem;
   .footer-title {
     @media screen and(min-width:600px) {
-      font-size: 2.5vw;
+      font-size: 1.5rem;
     }
     display: flex;
     flex-direction: column;
@@ -802,7 +896,7 @@ a {
     margin-bottom: 2rem;
     .footer-subtitle {
       @media screen and(min-width:600px) {
-        font-size: 2.3vw;
+        font-size: 1.2rem;
       }
       font-size: 0.9rem;
       color: var(--primary-one);
@@ -811,35 +905,60 @@ a {
   .info-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2rem;
     gap: 2rem;
+
+    @media screen and (min-width: 600px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 80%;
+      gap: 5rem;
+    }
+    @media screen and (min-width: 1500px) {
+      padding-top: 2rem;
+      gap: 7rem;
+    }
     p {
       @media screen and(min-width:600px) {
-        font-size: 2.3vw;
+        font-size: 1.2rem;
+        width: 18rem;
       }
     }
     h3 {
       @media screen and(min-width:600px) {
-        font-size: 2.3vw;
+        font-size: 1.5rem;
       }
       font-size: 1.2rem;
     }
     a {
       @media screen and(min-width:600px) {
-        font-size: 2.3vw;
+        font-size: 1.2rem;
       }
       color: var(--primary-white);
+
+      text-decoration: underline;
+
       transition: 0.3s;
       &:hover {
+        text-decoration: none;
         color: var(--primary-one);
       }
     }
-
+    .telephone {
+      @media screen and (min-width: 1500px) {
+        margin-bottom: 15rem;
+      }
+    }
     .contact-informations {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 1rem;
+      width: 20rem;
       h2 {
         color: var(--primary-one);
         font-weight: 600;
