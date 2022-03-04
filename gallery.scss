@@ -201,8 +201,8 @@ body {
     "img22 img10"
     "img8 img23"
     "gallery-h2 gallery-h2"
-    "img26 img52"
-    "img27 img53"
+    "img48 img52"
+    "img48 img53"
     "img28 img54"
     "img29 img55"
     "img30 img56"
@@ -220,14 +220,15 @@ body {
     "img42 img68"
     "img43 img69"
     "img44 img70"
-    "img45 img71"
+    "img45 img45"
     "img46 img72"
-    "img47 img73"
-    "img48 img74"
+    "img26 img73"
+    "img27 img74"
     "img49 img75"
     "img50 img76"
     "img78 img77"
-    "img79 img80";
+    "img79 img80"
+    "img71 img47";
   @media screen and (min-width: 1000px) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -243,8 +244,8 @@ body {
       "img2 img1 img23"
       "img12 . ."
       "gallery-h2 gallery-h2 gallery-h2"
-      "img26 img52 img27 "
-      "img28 img53 img54"
+      "img48 img52 img27 "
+      "img48 img53 img54"
       "img29 img30 img55"
       "img31 img56 img57"
       "img32 img33 img58"
@@ -255,12 +256,13 @@ body {
       "img40 img65 img66"
       "img41 img42 img67"
       "img43 img68 img69"
-      "img44 img45 img70"
-      "img46 img71 img72"
-      "img47 img48 img73"
+      "img44 img45 img45"
+      "img46 img26 img72"
+      "img47 img28 img73"
       "img49 img74 img75"
       "img50 img78 img76"
-      "img79 img77 img80";
+      "img79 img77 img80"
+      "img71 img70 .";
   }
   @media screen and (min-width: 1374px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -287,7 +289,7 @@ body {
       "img47 img55 img73 img70"
       "img49 img74 img75 img44"
       "img50 img78 img76 img77"
-      "img79 img80 img72 .";
+      "img79 img80 img72 . ";
   }
 }
 
@@ -309,6 +311,11 @@ body {
   }
 }
 #index-gallery {
+  @media screen and (max-width: 600px) {
+    width: 90vw;
+    margin-right: auto;
+    margin-left: auto;
+  }
   div {
     @media screen and (max-width: 600px) {
       width: 70%;

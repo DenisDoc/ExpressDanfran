@@ -28,12 +28,14 @@ if (galleryImages) {
 
       let newImg = document.createElement("img");
       newImageWindow.appendChild(newImg);
-      newImg.setAttribute("src", "../express-img/" + setNewImgUrl);
+      newImg.setAttribute("src", "./express-img/" + setNewImgUrl);
       newImg.setAttribute("id", "current-img");
+      console.log(newImg);
 
       newImg.onload = function () {
         let imgWidth = this.width;
         let calcImgToEdge = (windowWidth - imgWidth) / 2 - 50;
+        let calcImgToEdgeRight = (windowWidth - imgWidth) / 2 - 50 - 15;
 
         let newNextBtn = document.createElement("a");
         let btnNextText = document.createTextNode(">");
@@ -41,7 +43,7 @@ if (galleryImages) {
         container.appendChild(newNextBtn);
         newNextBtn.setAttribute("class", "img-btn-next");
         newNextBtn.setAttribute("onclick", "changeImg(1)");
-        newNextBtn.style.cssText = "right:" + calcImgToEdge + "px;";
+        newNextBtn.style.cssText = "right:" + calcImgToEdgeRight + "px;";
 
         let newPrevBtn = document.createElement("a");
         let btnPrevText = document.createTextNode("<");
@@ -79,11 +81,12 @@ function changeImg(changeDir) {
 
   newImg.onload = function () {
     let imgWidth = this.width;
-    let calcImgToEdge = (windowWidth - imgWidth) / 2 - 0;
+    let calcImgToEdge = (windowWidth - imgWidth) / 2 - 50;
+    let calcImgToEdgeRight = (windowWidth - imgWidth) / 2 - 50 - 15;
 
-    let nextBtn = document.getElementsByClassName("img-btn-next");
-    nextBtn.style.ccsText = "right:" + calcImgToEdge + "px;";
-    let prevBtn = document.getElementsByClassName("img-btn-prev");
+    let prevBtn = document.querySelector(".img-btn-prev");
     prevBtn.style.cssText = "left:" + calcImgToEdge + "px;";
+    let nextBtn = document.querySelector(".img-btn-next");
+    nextBtn.style.cssText = "right:" + calcImgToEdgeRight + "px;";
   };
 }
