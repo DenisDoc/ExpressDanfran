@@ -28,7 +28,7 @@ if (galleryImages) {
 
       let newImg = document.createElement("img");
       newImageWindow.appendChild(newImg);
-      newImg.setAttribute("src", "/express-img/" + setNewImgUrl);
+      newImg.setAttribute("src", "../express-img/" + setNewImgUrl);
       newImg.setAttribute("id", "current-img");
 
       newImg.onload = function () {
