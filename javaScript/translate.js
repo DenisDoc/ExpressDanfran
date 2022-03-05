@@ -66,14 +66,11 @@ const classChange = [
 const textChangeEn = [
   "About us",
   "Gallery",
-
   "<span>The correct choice</span> when it comes to BIG problems.",
   "With more than 10 years of experience in transportation, Express Agabaritic and Danfran offer oversized transportation services of the highest standard.",
-
   "Oversize load transport",
   "Freight forwarder",
-  "Community Transportation",
-
+  "Community Transport",
   "Oversize load transport is our primary focus",
   "Weight",
   "Locations",
@@ -81,16 +78,13 @@ const textChangeEn = [
   "Any weight up to 39500kg",
   "All across Europe",
   "Any size loads",
-
   "About us",
   "S.C. Express Agabaritic S.R.L. was founded in 2016. It is composed of a young and dynamic team that puts an accent on professionalism and the security of your goods. Express Agabaritic and  Danfran work in close connection so that they can offer you high quality, oversize load transportation. Express Agabaritic have: 1 trailer with 3 axles.",
   "With more than 17 years of experience in transportation and with a highly capable and devoted team, S.C. Danfran S.R.L offers professionalism, punctuality and security when it comes to transporting goods of any kind. Danfran have: 3 platforms of 24 tons, 2 trailers with 4 axles, 1 trailer with 5 axles, 1 trailer with 3 axles, 2 oversized tarpaulins and one gondola.",
-
   "Photo gallery",
   "TRUST, SECURITY, PROFESSIONALISM!",
   "We will show you an overview of our work.",
   "Gallery",
-
   "Oversize load transport, Freight forwarder, Community Transportation ",
   "TELEPHONE",
   "ADDRESS",
@@ -101,14 +95,11 @@ const textChangeEn = [
 const textChangeRo = [
   "Despre noi",
   "Galerie",
-
   "<span>Alegerea potrivita</span> când vine vorba de probleme MARI!",
   " Cu peste 10 ani de experiență în domeniul transportului, Express<strong> Agabaritic</strong> și Danfran oferă<strong> servicii de transport agabaritic</strong> la cele mai înalte standarde.",
-
   "Transport agabaritic",
   "Casă de expediții",
   "Transport comunitate",
-
   "Trasportul agabaritic constitiue principala noastră ocupație",
   "Greutate",
   "Locații",
@@ -116,16 +107,13 @@ const textChangeRo = [
   "Cu o greutate de până la 39500kg",
   "Transport în toată Europa",
   "Încărcătură de orice dimensiune",
-
   "Despre noi",
   "SC Express Agabaritic SRL a fost înființată în anul 2016 și este alcătuită dintr-o echipa tânăra și dinamică, care pune accentul pe profesionalism și pe siguranță bunurilor dumneavoastră. Express Agabaritic lucrează în strânsă legătură cu Danfran pentru a va oferi transporturi agabaritice la cele mai înalte standarde. Express Agabaritic dispune de: 1 trailer cu 3 axe.",
   "Cu 17 ani de experiență în domeniul transportului, o echipa experimentată și devotată, SC Danfran SRL oferă seriozitate, punctualitate și siguranță când vine vorba de transportarea bunurilor de orice fel. Danfran dispune de: 3 paltforme de 24 tone, 2 trailere cu 4 axe, 1 trailer cu 5 axe, 1 trailer cu 3 axe, 2 prealte agabaritice, 1 gondola.",
-
   "Galerie photo",
   "ÎNCREDERE, SIGURANȚĂ, PROFESIONALISM!",
   "Vă punem la dispoziție o parte din lucrările realizate de echipa Express Agabaritic și Danfran.",
   "Galerie",
-
   "Servicii de transport agabaritic, casă de expediții, transport comunitate.",
   "TELEFON",
   "ADRESĂ",
@@ -154,5 +142,3 @@ btn.addEventListener("click", function () {
     }
   }
 });
-
-console.log(classChange);

@@ -16,7 +16,6 @@ if (galleryImages) {
       let getFullImageUrl = getElementCss.getPropertyValue("background-image");
       let getImgUrlPos = getFullImageUrl.split("/express-img-tmb/");
       let setNewImgUrl = getImgUrlPos[1].replace('")', "");
-      console.log(setNewImgUrl);
 
       getLatestOpenedImg = index + 1;
 
@@ -30,12 +29,11 @@ if (galleryImages) {
       newImageWindow.appendChild(newImg);
       newImg.setAttribute("src", "./express-img/" + setNewImgUrl);
       newImg.setAttribute("id", "current-img");
-      console.log(newImg);
 
       newImg.onload = function () {
         let imgWidth = this.width;
-        let calcImgToEdge = (windowWidth - imgWidth) / 2 - 50;
-        let calcImgToEdgeRight = (windowWidth - imgWidth) / 2 - 50 - 15;
+        let calcImgToEdge = (windowWidth - imgWidth) / 2 - 70;
+        let calcImgToEdgeRight = (windowWidth - imgWidth) / 2 - 70 - 10;
 
         let newNextBtn = document.createElement("a");
         let btnNextText = document.createTextNode(">");
@@ -81,8 +79,8 @@ function changeImg(changeDir) {
 
   newImg.onload = function () {
     let imgWidth = this.width;
-    let calcImgToEdge = (windowWidth - imgWidth) / 2 - 50;
-    let calcImgToEdgeRight = (windowWidth - imgWidth) / 2 - 50 - 15;
+    let calcImgToEdge = (windowWidth - imgWidth) / 2 - 70;
+    let calcImgToEdgeRight = (windowWidth - imgWidth) / 2 - 70 - 10;
 
     let prevBtn = document.querySelector(".img-btn-prev");
     prevBtn.style.cssText = "left:" + calcImgToEdge + "px;";
