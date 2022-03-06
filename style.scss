@@ -753,7 +753,7 @@ footer,
     }
     .main-img-container {
       height: 50vw;
-
+      width: 100%;
       @media screen and(min-width:1100px) {
         height: inherit;
       }
