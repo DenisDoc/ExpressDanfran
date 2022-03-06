@@ -127,7 +127,13 @@ body {
     background-color: var(--primary-two);
   }
 }
-
+.go-to-main-page {
+  .text {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+}
 h1,
 h2 {
   color: var(--primary-black);
