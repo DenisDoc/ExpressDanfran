@@ -758,8 +758,8 @@ footer,
         height: inherit;
       }
       .main-img {
-        max-width: 80vw;
-        @media screen and(min-width:700px) {
+        width: 100%;
+        @media screen and(min-width:400px) {
           width: 70%;
         }
         @media screen and(min-width:1000px) {
