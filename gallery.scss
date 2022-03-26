@@ -83,7 +83,6 @@ body {
   margin-left: auto;
   min-height: 100vh;
   line-height: 1.5;
-  max-width: 1440px;
   text-rendering: optimizeSpeed;
   font-family: "Raleway", Times, serif;
   font-size: 16px;
@@ -115,6 +114,10 @@ body {
   width: 9rem;
   .logo {
     color: var(--primary-black);
+    display: block;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: left;
   }
 }
 .home-icon {
@@ -375,10 +378,10 @@ h2 {
     background-clip: content-box;
     cursor: pointer;
   }
-  h1 {
+  .gallery-title {
     grid-area: gallery-h1;
   }
-  h2 {
+  .gallery-title-two {
     grid-area: gallery-h2;
   }
 

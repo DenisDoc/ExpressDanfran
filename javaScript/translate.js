@@ -89,7 +89,7 @@ const textChangeEn = [
   "TELEPHONE",
   "ADDRESS",
   "Street",
-  "Monday-Friday:",
+  "Monday-Friday: 09:00-17:00",
 ];
 
 const textChangeRo = [
@@ -118,7 +118,7 @@ const textChangeRo = [
   "TELEFON",
   "ADRESĂ",
   "Strada",
-  "Luni-Vineri:",
+  "Luni-Vineri: 09:00-17:00",
 ];
 btn.addEventListener("click", function () {
   for (let i = 0; i < textChangeEn.length; i++) {

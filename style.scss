@@ -63,7 +63,7 @@ picture {
 /*Variables*/
 :root {
   --primary-one: #1de2a2;
-  --primary-two: rgba(62, 120, 178, 1);
+  --primary-two: rgba(62, 100, 178, 1);
   --primary-white: rgb(243, 243, 243);
   --primary-black: rgba(51, 51, 53, 1);
 
@@ -168,7 +168,7 @@ footer,
 }
 .color {
   color: var(--primary-white);
-  background-color: #3e78b2;
+  background-color: var(--primary-two);
   border-radius: 50%;
   padding: 0.2rem;
   transition: 0.5s ease-in;
@@ -181,8 +181,12 @@ footer,
 .logo-container {
   text-align: left;
   width: 9.2rem;
+
   .logo {
     color: var(--primary-black);
+    display: block;
+    font-weight: 500;
+    font-size: 1rem;
   }
 }
 //----------------------------Hamburger menu------------------------
@@ -223,7 +227,7 @@ footer,
   }
 }
 .nav-menu {
-  z-index: 2;
+  z-index: 1000;
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -247,6 +251,7 @@ footer,
     left: -0px;
     margin: auto;
     position: absolute;
+    z-index: 1000;
   }
   .contact-btn {
     color: var(--primary-white);
@@ -291,7 +296,7 @@ footer,
 .main-circle-three {
   position: absolute;
   width: clamp(20rem, 30rem, 50rem);
-  z-index: -2;
+  z-index: -50;
   animation: bg-circles 50s forwards infinite linear;
 }
 .circle-two {
@@ -384,13 +389,13 @@ footer,
   }
 }
 .green {
-  animation: showup 5s forwards;
+  animation: showup 3s forwards;
 }
 .blue {
-  animation: showup 4s forwards;
+  animation: showup 2s forwards;
 }
 .black {
-  animation: showup 3s forwards;
+  animation: showup 1s forwards;
 }
 @keyframes showup {
   from {
@@ -445,7 +450,9 @@ footer,
   }
 }
 .hero {
+  z-index: 1;
   .call-to-action {
+    z-index: 1;
     @media screen and (min-width: 1100px) {
       text-align: left;
       align-items: flex-start;
@@ -454,24 +461,31 @@ footer,
     }
     .hero-titlu {
       font-size: 1.9rem;
+      line-height: 2rem;
       font-weight: 700;
       margin-top: 2.5rem;
       @media screen and (min-width: 600px) {
         font-size: 5.7vw;
         margin-left: 2rem;
         margin-right: 2rem;
+        line-height: 3rem;
+      }
+      @media screen and (min-width: 800px) {
+        line-height: 4rem;
       }
       @media screen and (min-width: 1100px) {
         font-size: 3rem;
         max-width: 30rem;
         margin-left: 0rem;
         margin-right: 0rem;
+        line-height: 3.8rem;
         .header-text-accent-color {
           font-size: 3.2rem;
         }
       }
+
       span {
-        color: #3e78b2;
+        color: var(--primary-two);
       }
     }
     .hero-text {
@@ -501,6 +515,7 @@ footer,
       background: var(--primary-two);
       color: var(--primary-white);
       transition: 0.5s linear;
+      border: 1px solid rgba(0, 0, 0, 0);
       &:hover {
         background: none;
         border: 1px solid var(--primary-two);
@@ -520,7 +535,7 @@ footer,
     margin-right: 11rem;
     margin-left: 11rem;
     margin: 2rem 11rem 7rem 11rem;
-    padding: 0rem 2.5rem 5rem 2.5rem;
+    padding: 0rem 2.5rem 8rem 2.5rem;
 
     overflow: hidden;
     background-image: url(./pozeDesktop/desktop-main-circles-group.svg);
@@ -559,7 +574,7 @@ footer,
     transform: rotate(-5deg);
     width: 14.8rem;
     height: 3.75rem;
-    animation: showup 3s forwards;
+    animation: showup 1s forwards;
     @media screen and(min-width:600px) {
       width: 42vw;
       height: 9vw;
@@ -589,7 +604,7 @@ footer,
     transform: rotate(-5deg);
     width: 12.3rem;
     height: 3.1rem;
-    animation: showup 4s forwards;
+    animation: showup 2s forwards;
     @media screen and(min-width:600px) {
       width: 35vw;
       height: 8vw;
@@ -614,7 +629,7 @@ footer,
     box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.25);
     width: 11rem;
     height: 2.5rem;
-    animation: showup 5s forwards;
+    animation: showup 3s forwards;
     @media screen and(min-width:600px) {
       width: 30vw;
       height: 7vw;
@@ -805,20 +820,6 @@ footer,
           }
         }
       }
-      // .express {
-      //   @media screen and(min-width:1100px ) {
-      //     border-bottom: 1px solid var(--primary-one);
-      //     padding-bottom: 2rem;
-      //     margin-bottom: 0rem;
-      //     padding-bottom: 2rem;
-      //   }
-      // }
-      // .danfran {
-      //   @media screen and(min-width:1100px ) {
-      //     margin-top: 0rem;
-      //     padding-top: 2rem;
-      //   }
-      // }
       @media screen and(min-width:850) {
         text-align: left;
         align-items: flex-start;
@@ -842,7 +843,6 @@ footer,
   width: 100%;
   margin-top: 4rem;
   padding: 1.2rem 1.2rem 2rem 1.2rem;
-  border-radius: 0rem 3rem 0rem 0rem;
   color: var(--primary-white);
   h3 {
     @media screen and(min-width:600px) {
@@ -874,9 +874,9 @@ footer,
   border-radius: 15px;
   border: 0.1rem solid var(--primary-white);
   transition: 0.5s linear;
+
   &:hover {
     background: var(--primary-white);
-    border: 1px solid var(--primary-white);
     color: var(--primary-two);
   }
   @media screen and(min-width:600px) {
