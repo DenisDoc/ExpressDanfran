@@ -1,0 +1,17 @@
+<svg width="385" height="385" viewBox="0 0 385 385" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="heroCiclesGroup">
+<path class="green" id="Ellipse 38" d="M384.775 192.57C384.775 86.4942 298.783 0.50236 192.707 0.50236C86.6308 0.50236 0.639038 86.4942 0.639038 192.57C0.639038 298.647 86.6308 384.638 192.707 384.638C298.783 384.638 384.775 298.647 384.775 192.57Z" fill="#333335"/>
+<path class="blue" id="Ellipse 38_2" d="M353 161C353 72.6344 281.366 0.999988 193 0.999988C104.634 0.999988 33 72.6344 33 161C33 249.366 104.634 321 193 321C281.366 321 353 249.366 353 161Z" fill="url(#paint0_linear_276_50)"/>
+<path class="black" id="Ellipse 39" d="M314 121.5C314 54.9497 260.05 1 193.5 1C126.95 1 73 54.9497 73 121.5C73 188.05 126.95 242 193.5 242C260.05 242 314 188.05 314 121.5Z" fill="url(#paint1_linear_276_50)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_276_50" x1="193" y1="331" x2="193" y2="-9.00002" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3E78B2" stop-opacity="0"/>
+<stop offset="1" stop-color="#3E78B2"/>
+</linearGradient>
+<linearGradient id="paint1_linear_276_50" x1="193.757" y1="253.232" x2="193.757" y2="-3.7683" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1DE2A2" stop-opacity="0"/>
+<stop offset="1" stop-color="#1DE2A2"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+}
+.container,
+.container2 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#EuropaC,
+#EuropaVV,
+#EuropaCC,
+#EuropaN,
+#EuropaV,
+#EuropaS {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 11s 2s ease-in forwards;
+  animation: showup 1s ease-out;
+}
+
+#check-point-four,
+#check-point-otwo,
+#check-point-five,
+#check-point-three,
+#check-point-one,
+#check-point-eight,
+#check-point-six,
+#check-point-seven {
+  animation: pop 1.6s 0s ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+.svg {
+  width: 700px;
+  height: 700px;
+}
+#map-bg {
+  animation: pop 2s 0s ease-in;
+  display: none;
+}
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -30px);
+  }
+  50% {
+    transform: translate(0px, 2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes showup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+///////////////////////////////
+#douasecunde {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+}
+
+#patrusecunde {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 10s linear forwards;
+}
