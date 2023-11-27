@@ -1,5 +1,13 @@
+----------------------------------------------------
+
 <div align="center">
   <a target=”_blank” href="https://denisdoc.github.io/ExpressDanfran/">:truck: Live preview of ExpressDanfran :articulated_lorry:</a>
+</div>
+
+----------------------------------------------------
+
+<div align="center">
+  <p>Danfran and Express agabaritic are two companies that work under the same flag with the main area activity based in oversize load transport</p>
 </div>
 
 ----------------------------------------------------
