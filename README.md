@@ -7,7 +7,7 @@
 ----------------------------------------------------
 
 <div align="center">
-  <p>Danfran and Express agabaritic are two companies that work under the same flag with the main area activity based in oversize load transport</p>
+  <p>Danfran and Express agabaritic are two companies that work under the same flag with the main area of activity based in oversize load transport</p>
 </div>
 
 ----------------------------------------------------
